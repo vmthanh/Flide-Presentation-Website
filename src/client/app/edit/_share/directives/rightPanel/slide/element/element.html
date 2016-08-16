@@ -1,0 +1,10 @@
+<div class="slide-element-container" ng-style="{'top': vm.model.detail.top, 'left': vm.model.detail.left}">
+	<div class="slide-element-wrapper" ng-class="{'active': vm.isChosen}">
+	    <div ng-style="vm.model.detail.style" ng-model="vm.model.detail.content" contenteditable="false" ng-focus="vm.borderFocusIn()" ng-blur="vm.borderForcusOut($parent.$index)" class="slide-element"></div>
+	    <img ng-class="{'active': vm.isChosen}" src="assets/css/app/images/content-editor/presentation/slide-element-wrapper/arrowBL.png" class="arrowBL slide-decorator">
+	    <img ng-class="{'active': vm.isChosen}" src="assets/css/app/images/content-editor/presentation/slide-element-wrapper/arrowTL.png" class="arrowTL slide-decorator">
+	    <img ng-class="{'active': vm.isChosen}" src="assets/css/app/images/content-editor/presentation/slide-element-wrapper/arrowTR.png" class="arrowTR slide-decorator">
+	    <img ng-class="{'active': vm.isChosen}" src="assets/css/app/images/content-editor/presentation/slide-element-wrapper/arrowBR.png" class="arrowBR slide-decorator">
+	    <img ng-class="{'active': vm.isChosen}" src="assets/css/app/images/content-editor/presentation/slide-element-wrapper/circleLine.png" class="rotate-handle slide-decorator">
+	</div>
+</div>

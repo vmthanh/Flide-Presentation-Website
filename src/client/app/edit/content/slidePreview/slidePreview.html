@@ -1,0 +1,11 @@
+<div class="invidual-slide">
+    <div class="slide-number">
+     <span>{{$parent.$index + 1}}<span ng-show="$index">.{{$index}}</span></span>
+    </div>
+    <div class="preview-content" ng-click="contentCtrl.moveToSubSlide($parent.$index,$index)" ng-class="{'active': ($parent.$index === editCtrl.articleModel.currentSlideId && $index === editCtrl.articleModel.currentSubslideId)}">
+        <hr class="horizontal-line" />
+        <img alt="book-icon" src="assets/css/app/images/background.png">
+        <h3 ng-show="subslide.elements[0].typeE === 'header'" ng-style="subslide.elements[0].detail.style"  ng-model="subslide.elements[0].detail.content" contenteditable="true" class="title" ng-click="contentCtrl.editTitle($parent.$index,$index)" ng-blur="contentCtrl.saveElementChanges(0, subslide.elements[0])"></h3>
+        <h5 ng-style="item.detail.style" ng-repeat="item in subslide.elements" ng-model="item.detail.content" contenteditable="true" class="subtitle" ng-click="contentCtrl.editSubtitle($parent.$parent.$parent.$index,$parent.$parent.$index)" ng-blur="contentCtrl.saveElementChanges($index,item)" ng-if="item.typeE !== 'header'"></h5>
+    </div>
+</div>

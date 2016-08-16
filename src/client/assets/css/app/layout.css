@@ -1,0 +1,48 @@
+.page {
+    height: 100%;
+}
+
+.page .header {
+    min-width: 1024px;
+}
+
+.page .header > div {
+    margin-bottom: 0px;
+    padding-left: 0px;
+    border-bottom: 1px solid #c6c5cd;
+    margin-bottom: 0px;
+}
+
+.page .header > div > * {
+    padding: 0px;
+}
+
+.page .content {
+    height: 100%;
+}
+
+.page .content > div {
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.decorator .left-navbar {
+    background: #ff6f3b none repeat scroll 0 0;
+    height: 36px;
+}
+
+.list {
+
+}
+
+.list .item .text-wrapper,
+.list .item .text-wrapper:focus,
+.list .item:hover .text-wrapper,
+.list .item.active .text-wrapper,
+.list .item.active .text-wrapper:hover,
+.list .item.active .text-wrapper:focus {
+    border: none;
+    background: transparent;
+    outline: 0;
+}

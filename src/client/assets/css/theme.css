@@ -1,0 +1,482 @@
+
+/*@font-face {
+    font-family: ProximaNova;
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/ProximaNova.otf");
+    src: url("../fonts/ProximaNova.woff");
+}
+
+@font-face {
+    font-family: ProximaNovaLight;
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/ProximaNova-Light.otf");
+    src: url("../fonts/ProximaNova-Light.woff");
+}
+
+html {
+    overflow: auto;
+}
+
+body {
+    font-family: "Rokkitt", serif;
+    min-width: 1024px;
+}
+
+.page {
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+    position: relative;
+}
+
+.content >div {
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.header {
+    min-width: 1024px;
+}
+
+.header > div {
+    margin-bottom: 0px;
+    padding-left: 0px;
+    border-bottom: 1px solid #c6c5cd;
+    margin-bottom: 0px;
+}
+
+.header > div > * {
+    padding: 0px;
+}
+
+.header > div > .logo {
+    text-align: center;
+    padding: 0px;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: #ff7339;
+}
+
+.header > div > .logo {
+    margin-top: 7px;
+}
+
+.main-menu > ul {
+    padding-left: 15px;
+    padding-right: 0px;
+    border-bottom: none;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float: none;
+}
+
+.main-menu > ul > li {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.main-menu > ul > li > a {
+    color: #383838;
+    margin-right: 0px;
+}
+
+.header > div > div > ul > li > a,
+.header > div > div > ul > li > a:focus,
+.header > div > div > ul > li:hover > a,
+.header > div > div > ul > li.active > a,
+.header > div > div > ul > li.active > a:hover,
+.header > div > div > ul > li.active > a:focus {
+    border: none;
+    background: transparent;
+    outline: 0;
+}
+
+.main-menu > ul > li > a > span {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.main-menu > ul > li:hover > a > span,
+.main-menu > ul > li.active > a > span {
+    border-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: tomato;
+    background: white;
+    padding-bottom: 6.3px;
+}
+
+.main-menu > ul > li > a > span > img {
+    margin-right: 7px;
+}
+
+.main-menu > ul > li > .menu-theme > span > img {
+    background-image: url('../images/icon_theme.png');
+    background-size: 20px 20px;
+}
+
+.main-menu > ul > li > .menu-content > span > img {
+    background-image: url('../images/icon_content.png');
+    width: 25px;
+    background-size: 25px 20px;
+}
+
+.main-menu > ul > li > .menu-style > span > img {
+    background-image: url('../images/icon_style.png');
+    background-size: auto 20px;
+}
+
+.user-options > ul {
+    float: right;
+    padding-right: 0px;
+    border-bottom: none;
+}
+
+.user-options > ul > li > a {
+    padding: 8px 8px;
+}
+
+.user-options > ul > li > a > img {
+    background-size: auto 18px;
+}
+
+.user-options > ul > li > .options-saved > img {
+    background-image: url('../images/icon_checked.png');
+    width: 21px;
+}
+
+.user-options > ul > li > .options-preview > img {
+    background-image: url('../images/icon_eye.png');
+    width: 27px;
+}
+
+.user-options > ul > li > .options-settings > img {
+    background-image: url('../images/icon_setting.png');
+    width: 19px;
+}
+
+.user-options > ul > li > .options-menu > img {
+    background-image: url('../images/icon_align.png');
+    width: 19px;
+}
+
+.left-navbar>li {
+    text-align: center;
+    padding: 0;
+    height: 36px;
+}
+
+.left-navbar {
+    background: #ff6f3b none repeat scroll 0 0;
+    height: 36px;
+}
+
+.left-navbar>li>a {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+    margin-left: 2px;
+    height: 36px;
+    padding-top: 6px;
+}
+
+.left-navbar>li>a:focus,
+.left-navbar>li>a:hover {
+    background-color: #ff4a08;
+    border: medium none;
+    margin-left: 2px;
+    height: 35px;
+    outline: 0;
+}
+
+.left-navbar>li.active>a,
+.left-navbar>li.active>a:focus,
+.left-navbar>li.active>a:hover {
+    background: #ff4a08 none repeat scroll 0 0;
+    border: medium none;
+    color: white;
+    height: 35px;
+    outline: 0;
+}
+
+.content-list-menu {
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+}
+
+.content-list-menu >li>.right-img>span>img {
+    background-image: url('../images/icon_content_right.png');
+}
+
+.content-list-menu>li>.down-img>span>img {
+    background-image: url('../images/icon_content_down.png');
+}
+
+.content-list-menu>li>.images>span>img {
+    background-image: url('../images/icon_content_image.png');
+}
+
+.content-list-menu>li>a>span>img {
+    width: 25px;
+    height: 19px;
+    margin-bottom: 0;
+    background-size: 25px 19px;
+    background-repeat: no-repeat;
+}
+
+.content-list-menu >li {
+    text-align: center;
+    padding: 0;
+    height: 35px;
+}
+
+.content-list-menu>li.active>a,
+.content-list-menu>li.active>a:focus,
+.content-list-menu>li.active>a:hover {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+}
+
+.content-list-menu>li>a:focus,
+.content-list-menu>li>a:hover {
+    background-color: transparent;
+    outline: 0;
+}
+
+.content-list-menu>li>a {
+    border: none;
+    background: transparent;
+    outline: 0;
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 5px;
+}
+
+.content-list-menu>.active>a>span {
+    border-bottom: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: tomato;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.content-list-menu-detail>.title-text {
+    margin-left: 5%;
+}
+
+.title-text .title-left-section {
+    float: left;
+}
+
+.title-text .title-right-section {
+    float: left;
+    margin-left: 2%;
+    width: 90%
+}
+
+.title-right-section>.title-line {
+    border-color: #555555;
+    border-width: 2px;
+}
+
+.title-right-section>.title-header {
+    font-family: ProximaNova;
+    padding: 2px 0px;
+    outline: 0;
+}
+
+.title-right-section>.title-subtitle {
+    font-family: ProximaNovaLight;
+    padding: 2px 0px;
+    outline: 0;
+}
+
+.title-right-section>img {
+    background-image: url('../images/icon_book.jpg');
+    height: 36px;
+    width: 36px;
+}
+
+.presentation {
+    position: relative;
+    padding: 0;
+    border-left: 1px solid #c6c5cd;
+}
+
+.presentation>.reveal-custom {
+    background-color: #cccccc;
+}
+
+.presentation>.add-top-btn {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    cursor: pointer;
+    z-index: 32;
+}
+
+.presentation>.add-top-btn img {
+    width: 23px;
+    height: 23px;
+}
+
+.presentation>.add-right-btn {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    cursor: pointer;
+    z-index: 32;
+}
+
+.presentation>.add-right-btn img {
+    width: 23px;
+    height: 23px;
+}
+
+.presentation>.add-bottom-btn {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    cursor: pointer;
+    z-index: 32;
+}
+
+.presentation>.add-bottom-btn img {
+    width: 23px;
+    height: 23px;
+}
+
+.presentation>.add-left-btn {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    cursor: pointer;
+    z-index: 32;
+}
+
+.presentation>.add-left-btn img {
+    width: 23px;
+    height: 23px;
+}
+
+.presentation>.reveal-custom>aside .square-icon {
+    position: fixed;
+    bottom: 54.5px;
+    right: 54.5px;
+    width: 18px;
+    height: 18px;
+    z-index: 31;
+    opacity: 0.7;
+}
+
+.presentation>.reveal-custom>.controls >.navigate-left {
+    opacity: 0.7;
+    border-right-color: #FF6F3B;
+    top: 44.5px;
+    left: 12.5px;
+}
+
+.presentation>.reveal-custom>.controls >.navigate-right {
+    opacity: 0.7;
+    border-left-color: #FF6F3B;
+    top: 44.5px;
+    left: 67px;
+}
+
+.presentation>.reveal-custom>.controls >.navigate-up {
+    opacity: 0.7;
+    border-bottom-color: #FF6F3B;
+    top: 12.5px;
+    left: 44.5px;
+}
+
+.presentation>.reveal-custom>.controls >.navigate-down {
+    opacity: 0.7;
+    border-top-color: #FF6F3B;
+    top: 67px;
+    left: 44.5px;
+}
+
+.presentation>.reveal-custom>.controls div {
+    transform: scale(0.75);
+}
+
+.section-custom {
+    text-align: left;
+    display: block;
+    line-height: normal!important;
+}
+
+.slide-title {
+    font-size: 90px!important;
+    max-width: 100%;
+    max-height: 100%;
+    outline: none;
+    text-align: left;
+}
+
+.slide-subtitle {
+    font-size: 70px!important;
+    max-width: 1000px;
+    outline: none;
+    text-align: left;
+}
+
+.arrowBL {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    width: 13px;
+    height: 13px;
+    visibility: hidden;
+}
+
+.arrowTL {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 13px;
+    height: 13px;
+    visibility: hidden;
+}
+
+.arrowTR {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 13px;
+    height: 13px;
+    visibility: hidden;
+}
+
+.arrowBR {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 13px;
+    height: 13px;
+    visibility: hidden;
+}
+
+.rotate-handle {
+    position: absolute;
+    left: 50%;
+    top: -40px;
+    max-width: 100%;
+    height: 40px;
+    visibility: hidden;
+}
+
+
+*/

@@ -1,0 +1,750 @@
+/* Logo */
+
+.logo {
+    text-align: center;
+    padding: 0px;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: #ff7339;
+    margin-top: 7px;
+}
+/* End of Logo */
+/* Main menu */
+
+.main-menu .list {
+    padding-left: 15px;
+    padding-right: 0px;
+    border-bottom: none;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float: none;
+}
+
+.main-menu .list .item {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.main-menu .list .item .text-wrapper {
+    color: #383838;
+    margin-right: 0px;
+}
+
+.main-menu .list .item .text {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.main-menu .list .item:hover .text,
+.main-menu .list .item.active .text {
+    border-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: tomato;
+    background: white;
+    padding-bottom: 6.3px;
+}
+
+.main-menu .list .item .text .icon {
+    margin-right: 7px;
+}
+
+.main-menu .list .item .menu-theme .text .icon {
+    background-image: url('images/main-menu/theme.png');
+    background-size: 20px 20px;
+}
+
+.main-menu .list .item .menu-content .text .icon {
+    background-image: url('images/main-menu/content.png');
+    width: 25px;
+    background-size: 25px 20px;
+}
+
+.main-menu .list .item .menu-style .text .icon {
+    background-image: url('images/main-menu/style.png');
+    background-size: auto 20px;
+}
+/* End of Main menu */
+/* User options */
+
+.user-options .list {
+    float: right;
+    padding-right: 0px;
+    border-bottom: none;
+}
+
+.user-options .list .item .text-wrapper {
+    padding: 8px 8px;
+}
+
+.user-options .list .item .text {
+    background-size: auto 18px;
+}
+
+.user-options .list .item .options-saved .text {
+    background-image: url('images/user-options/saved.png');
+    width: 21px;
+}
+
+.user-options .list .item .options-preview .text {
+    background-image: url('images/user-options/preview.png');
+    width: 27px;
+}
+
+.user-options .list .item .options-settings .text {
+    background-image: url('images/user-options/settings.png');
+    width: 19px;
+}
+
+.user-options .list .item .options-menu .text {
+    background-image: url('images/user-options/menu.png');
+    width: 19px;
+}
+/* End of User options */
+/* Left panel navigation */
+
+.left-navbar .item {
+    text-align: center;
+    padding: 0;
+    height: 36px;
+}
+
+.left-navbar .item .text-wrapper {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+    margin-left: 2px;
+    height: 36px;
+    padding-top: 6px;
+}
+
+.left-navbar .item .text-wrapper:focus,
+.left-navbar .item .text-wrapper:hover {
+    background-color: #ff4a08;
+    border: medium none;
+    margin-left: 2px;
+    height: 35px;
+    outline: 0;
+}
+
+.left-navbar .item.active .text-wrapper,
+.left-navbar .item.active .text-wrapper:focus,
+.left-navbar .item.active .text-wrapper:hover {
+    background: #ff4a08 none repeat scroll 0 0;
+    border: medium none;
+    color: white;
+    height: 35px;
+    outline: 0;
+}
+/* End of Left panel navigation */
+/* Left panel content menu */
+
+.toolbar.list {
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+}
+
+.toolbar.list .item {
+    text-align: center;
+    padding: 0;
+    height: 35px;
+}
+
+.toolbar.list .item .add-slide .text .icon {
+    background-image: url('images/content-editor/decorator/toolbar/add-slide.png');
+}
+
+.toolbar.list .item .add-subslide .text .icon {
+    background-image: url('images/content-editor/decorator/toolbar/add-subslide.png');
+}
+
+.toolbar.list .item .images .text .icon {
+    background-image: url('images/content-editor/decorator/toolbar/add-image.png');
+}
+
+.toolbar.list .item .text-wrapper .text .icon {
+    width: 25px;
+    height: 19px;
+    margin-bottom: 0;
+    background-size: 25px 19px;
+    background-repeat: no-repeat;
+}
+
+.toolbar.list .item.active .text-wrapper,
+.toolbar .item.active .text-wrapper:focus,
+.toolbar .item.active .text-wrapper:hover {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+}
+
+.toolbar.list .item .text-wrapper:focus,
+.toolbar.list .item .text-wrapper:hover {
+    background-color: transparent;
+    outline: 0;
+}
+
+.toolbar.list .item .text-wrapper {
+    border: none;
+    background: transparent;
+    outline: 0;
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 5px;
+}
+
+.toolbar.list .active .text-wrapper .text {
+    border-bottom: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: tomato;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+/* End of Left panel content menu */
+/* Left panel content */
+
+.preview-panel .slide-number {
+    margin-top: -12px;
+    margin-left: 6px;
+    float: left;
+}
+
+.preview-panel .preview-content {
+    margin-left: 5%;
+    width: 91%;
+    height: 100%;
+    padding-bottom: 2px;
+    background-color: none;
+}
+
+.preview-panel .preview-content.active {
+    background-color: lightgrey;
+}
+
+.preview-content .horizontal-line {
+    margin-bottom: 7px;
+    border-color: #555555;
+    border-width: 2px;
+}
+
+.preview-content .title {
+    outline: 0;
+    cursor: text!important;
+    margin-top: 10px;
+    word-wrap: break-word;
+}
+
+.preview-content .title span {
+    font-size: 28px!important;
+}
+
+.preview-content .subtitle {
+    outline: 0;
+    cursor: text!important;
+    word-wrap: break-word;
+}
+
+.preview-content .subtitle span {
+    font-size: 20px!important;
+}
+
+.preview-content >img {
+    background-image: url('images/content-editor/decorator/toolbar-detail/book.jpg');
+    height: 36px;
+    width: 36px;
+}
+/* End of Left panel content */
+/* Presentation */
+.presentation {
+    position: relative;
+    padding: 0;
+    border-left: 1px solid #c6c5cd;
+}
+
+.presentation>.reveal {
+    background-color: #cccccc;
+}
+
+.presentation .slides {
+    zoom: normal!important;
+    left: 0!important;
+    right: 0!important;
+    top: 0!important;
+    bottom: 0!important;
+    -ms-transform: translate(0%, 0%)!important;
+    -moz-transform: translate(0%, 0%)!important;
+    -webkit-transform: translate(0%, 0%)!important;
+}
+
+.presentation>.add-slide-up {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    cursor: pointer;
+    z-index: 32;
+}
+
+.presentation>.add-slide-up .icon {
+    width: 23px;
+    height: 23px;
+}
+
+.presentation>.add-slide-right {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    cursor: pointer;
+    z-index: 32;
+}
+
+.presentation>.add-slide-right .icon {
+    width: 23px;
+    height: 23px;
+}
+
+.presentation>.add-slide-down {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    cursor: pointer;
+    z-index: 32;
+}
+
+.presentation>.add-slide-down .icon {
+    width: 23px;
+    height: 23px;
+}
+
+.presentation>.add-slide-left {
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    cursor: pointer;
+    z-index: 32;
+}
+
+.presentation>.add-slide-left .icon {
+    width: 23px;
+    height: 23px;
+}
+
+.presentation>.reveal>aside .square-icon {
+    position: fixed;
+    bottom: 54.5px;
+    right: 54.5px;
+    width: 18px;
+    height: 18px;
+    z-index: 31;
+    opacity: 0.7;
+}
+
+.presentation>.reveal>.controls >.navigate-left {
+    top: 44.5px;
+    left: 12.5px;
+}
+
+.presentation>.reveal>.controls >.navigate-left.enabled {
+    opacity: 0.7;
+    border-right-color: #FF6F3B;
+}
+
+.presentation>.reveal>.controls >.navigate-right {
+    top: 44.5px;
+    left: 67px;
+}
+
+.presentation>.reveal>.controls >.navigate-right.enabled {
+    opacity: 0.7;
+    border-left-color: #FF6F3B;
+}
+
+.presentation>.reveal>.controls >.navigate-up {
+    top: 12.5px;
+    left: 44.5px;
+}
+
+.presentation>.reveal>.controls >.navigate-up.enabled {
+    opacity: 0.7;
+    border-bottom-color: #FF6F3B;
+}
+
+.presentation>.reveal>.controls >.navigate-down {
+    top: 67px;
+    left: 44.5px;
+}
+
+.presentation>.reveal>.controls >.navigate-down.enabled {
+    opacity: 0.7;
+    border-top-color: #FF6F3B;
+}
+
+.presentation>.reveal>.controls div {
+    transform: scale(0.75);
+    opacity: 0.05
+}
+/* End of presentation */
+/* Slide element */
+
+.section-custom {
+    text-align: left;
+    display: block;
+    line-height: normal!important;
+}
+
+.slide-element-container {
+    position: absolute;
+    width: auto!important;
+}
+
+.slide-element-wrapper {
+    position: relative;
+    white-space: nowrap;
+    border: none;
+}
+
+.slide-element-wrapper.active {
+    border: 1px dashed rgba(0, 0, 0, .5);
+}
+
+.slide-element {
+    max-width: 100%;
+    max-height: 100%;
+    outline: none;
+}
+
+.arrowBL {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    width: 13px;
+    height: 13px;
+}
+
+.arrowTL {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 13px;
+    height: 13px;
+}
+
+.arrowTR {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 13px;
+    height: 13px;
+}
+
+.arrowBR {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 13px;
+    height: 13px;
+}
+
+.rotate-handle {
+    position: absolute;
+    left: 50%;
+    top: -40px;
+    max-width: 100%;
+    height: 40px;
+}
+
+.slide-decorator {
+    visibility: hidden;
+}
+
+.slide-decorator.active {
+    visibility: visible;
+}
+/* End of Slide element */
+/*Perfect scrollbar*/
+
+.scroller {
+    white-space: normal;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.ps-scrollbar-y-rail {
+    right: 0px!important;
+}
+/*End of perfect scrollbar*/
+/* CKEditor */
+
+.cke_top {
+    padding: 0!important;
+    border: 0!important;
+}
+
+.cke_toolgroup {
+    margin: 0!important;
+    border: 0!important;
+    height: 30px!important;
+}
+
+.cke_button {
+    background-color: #363636!important;
+}
+
+.cke_combo_button .cke_combo_text {
+    background-color: #363636!important;
+    color: #ECECEC!important;
+    height: 30px!important;
+    width: 40px!important;
+    font-size: 18px!important;
+    padding-top: 3px!important;
+    padding-left: 5px!important;
+}
+
+.cke_button_arrow {
+    display: none!important;
+}
+
+.cke_button__head1 {
+    height: 30px!important;
+    padding: 0!important;
+}
+
+.cke_button__head1_icon {
+    margin: 0!important;
+    height: 30px!important;
+    width: 30px!important;
+    background-size: 20px!important;
+    background-position: 5px!important;
+}
+
+.cke_button__head1_icon:hover {
+    background-color: #363636;
+}
+
+.cke_button__head2 {
+    height: 30px!important;
+    width: 50px!important;
+    padding: 0!important;
+}
+
+.cke_button__head2:hover {
+    background: #363636!important;
+}
+
+.cke_button__head2_icon {
+    margin: 0!important;
+    margin-left: 10px!important;
+    height: 30px!important;
+    width: 30px!important;
+    background-size: 20px!important;
+    background-position: 5px!important;
+}
+
+.cke_button__head3 {
+    height: 30px!important;
+    width: 45px!important;
+    padding: 0!important;
+    border-radius: 0!important;
+}
+
+.cke_button__head3:hover {
+    background: #363636!important;
+}
+
+.cke_button__head3_icon {
+    margin: 0!important;
+    margin-left: 5px!important;
+    height: 30px!important;
+    width: 30px!important;
+    background-size: 20px!important;
+    background-position: 5px!important;
+}
+
+.cke_button__head36 {
+    height: 30px!important;
+    width: 45px!important;
+    padding: 0!important;
+    border-radius: 0!important;
+}
+
+.cke_button__head36:hover {
+    background: #363636!important;
+}
+
+.cke_button__head36_icon {
+    margin: 0!important;
+    margin-left: 5px!important;
+    height: 30px!important;
+    width: 30px!important;
+    background-size: 30px!important;
+}
+
+.cke_combo_button {
+    margin: 0!important;
+    border: 0!important;
+    height: 30px!important;
+}
+
+.cke_combo_open {
+    display: none!important;
+}
+
+.cke_combo__fontsize {
+    margin: 0!important;
+    height: 30px!important;
+    width: 30px!important;
+}
+
+.cke_combo_text {
+    margin: 0!important;
+}
+
+.cke_button__textcolor {
+    height: 30px!important;
+    border-radius: 0!important;
+}
+
+.cke_button__textcolor:hover {
+    background: #363636!important;
+}
+
+.cke_button_on {
+    background: #363636!important;
+    box-shadow: none!important;
+}
+
+.cke_button__textcolor_icon {
+    margin-top: 3px!important;
+    margin-left: 10px!important;
+}
+
+.cke_button__delete {
+    height: 30px!important;
+    width: 30px!important;
+}
+
+.cke_button__delete:hover {
+    background: #363636!important;
+}
+
+.cke_button__delete_icon {
+    margin-top: 3px!important;
+    margin-left: 10px!important;
+    background-size: 15px!important;
+}
+
+.cke_button__moreoptions {
+    height: 30px!important;
+    width: 15px!important;
+}
+
+.cke_button__moreoptions:hover {
+    background: #363636!important;
+}
+
+.cke_button__moreoptions_icon {
+    background-size: 3px!important;
+    margin-top: 3px!important;
+    margin-left: 5px!important;
+}
+
+.invidual-slide {}
+
+.invidual-slide.active {
+    background-color: lightgrey;
+}
+
+.moreOptions {
+    background: #363636!important;
+    display: block!important;
+    width: 130px!important;
+    height: 40px!important;
+    top: 30px!important;
+    left: 132px!important;
+    outline: none!important;
+    border: none!important;
+    border-radius: 0!important;
+}
+
+.cke_moreblock {
+    outline: none!important;
+    border: none!important;
+}
+/* End of CKEditor */
+/*begin loading saving icon css*/
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes spin {
+    from {
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Loading animation container */
+
+.loading {
+    width: 28px;
+    height: 28px;
+    margin: -14px 0 0 -14px;
+}
+/* Spinning circle (inner circle) */
+
+.loading .maskedCircle {
+    width: 20px;
+    height: 20px;
+    border-radius: 12px;
+    border: 3px solid #FF6F3B;
+}
+/* Spinning circle mask */
+
+.loading .mask {
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+}
+/* Spinner */
+
+.loading .spinner {
+    position: absolute;
+    left: 2px;
+    top: 12px;
+    width: 26px;
+    height: 22px;
+    -webkit-animation: spin 1s infinite linear;
+    -moz-animation: spin 1s infinite linear;
+    -o-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+}
+/* ending loading saving icon css */

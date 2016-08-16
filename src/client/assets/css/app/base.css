@@ -1,0 +1,35 @@
+@font-face {
+    font-family: ProximaNova;
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/ProximaNova.otf");
+    src: url("fonts/ProximaNova.woff");
+}
+
+@font-face {
+    font-family: ProximaNovaLight;
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/ProximaNova-Light.otf");
+    src: url("fonts/ProximaNova-Light.woff");
+}
+
+html {
+    overflow: auto;
+}
+
+body {
+    font-family: "Rokkitt", serif;
+    min-width: 1024px;
+}
+
+a, a:focus, a:hover, {
+    border: none;
+    background: transparent;
+    outline: 0;
+}
+
+hr {
+    border-color: #555555;
+    border-width: 2px;
+}

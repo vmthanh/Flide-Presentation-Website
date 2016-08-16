@@ -1,0 +1,61 @@
+<ul class="nav nav-tabs left-navbar row">
+    <li class="col-md-4 item"><a class="text-wrapper" data-toggle="tab" title="Layout" href=".layout">Layout</a></li>
+    <li class="col-md-4 item active"><a class="text-wrapper" data-toggle="tab" title="Content" href=".menu-item-content">Content</a></li>
+    <li class="col-md-4 item"><a class="text-wrapper" data-toggle="tab" title="Widget" href=".widget">Widget</a></li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane fade layout">
+        <h1>Layout content</h1>
+    </div>
+    <div class="tab-pane fade in active menu-item-content">
+        <ul class="nav nav-tabs toolbar list row">
+            <li class="col-md-2 col-xs-2 item" ng-class="{'active': contentCtrl.activeToolbarItem === 0}">
+                <a title="Add Slide" class="add-slide text-wrapper" href="javascript:void(0)" ng-click="contentCtrl.activeToolbarItem = 0;editCtrl.addNewSlideRight();">
+                    <span class="text"><img class="icon" src="assets/css/app/images/background.png" alt="add-sibling-img"></span>
+                </a>
+            </li>
+            <li class="col-md-2 col-xs-2 item" ng-class="{'active': contentCtrl.activeToolbarItem === 1}">
+                <a title="Add Sub-Slide" class="add-subslide text-wrapper" href="javascript:void(0)" ng-click="contentCtrl.activeToolbarItem = 1;editCtrl.addNewSubslideDown()">
+                    <span class="text"><img class="icon" alt="add-sibling-img" src="assets/css/app/images/background.png"></span>
+                </a>
+            </li>
+            <li class="col-md-2 col-xs-2 item" ng-class="{'active': contentCtrl.activeToolbarItem === 2}">
+                <a class="text-wrapper" title="Title" href="javascript:void(0)" ng-click="contentCtrl.activeToolbarItem = 2;contentCtrl.addTitle(editCtrl.articleModel.currentSubSlide)">
+                    <span class="text">Title</span>
+                </a>
+            </li>
+            <li class="col-md-2 col-xs-2 item" ng-class="{'active': contentCtrl.activeToolbarItem === 3}">
+                <a class="text-wrapper" title="Text" href="javascript:void(0)" ng-click="contentCtrl.activeToolbarItem = 3;contentCtrl.addSubtitle(editCtrl.articleModel.currentSubSlide)">
+                    <span class="text">Text</span>
+                </a>
+            </li>
+            <li class="col-md-2 col-xs-2 item" ng-class="{'active': contentCtrl.activeToolbarItem === 4}">
+                <a class="text-wrapper" title="Note" href="javascript:void(0)" ng-click="contentCtrl.activeToolbarItem = 4;">
+                    <span class="text">Notes</span>
+                </a>
+            </li>
+            <li class="col-md-2 col-xs-2 item" ng-class="{'active': contentCtrl.activeToolbarItem === 5}">
+                <a title="add-image" class="images text-wrapper" href="javascript:void(0)" ng-click="contentCtrl.activeToolbarItem = 5;">
+                    <span class="text"><img class="icon" alt="add-img" src="assets/css/app/images/background.png"></span>
+                </a>
+            </li>
+        </ul>
+        <div class="toolbar-detail row">
+            <div class="tab-pane active preview-panel">
+                <perfect-scrollbar class="scroller"  wheel-speed="1" min-scrollbar-length="10">
+                    <div ng-repeat="slide in editCtrl.articleModel.slides">
+                        <slide-preview  ng-repeat="subslide in slide.subSlides"></slide-preview>
+                    </div>
+                </perfect-scrollbar>
+
+            </div>
+            <div class="tab-pane face notes">
+            </div>
+            <div class="tab-pane face images">
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade widget">
+        <h1>Widget content</h1>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+<nav class="header">
+  <div class="container-fluid">
+    <div class="logo col-sm-3 col-xs-3">
+      Craft your story
+    </div>
+    <div class="main-menu col-sm-6 col-xs-6">
+      <ul class="nav nav-tabs list">
+        <li ui-sref-active="active" class="item">
+          <a ui-sref="edit.theme({slideId: editCtrl.articleModel.currentSlideId + 1, subslideId: editCtrl.articleModel.currentSubslideId})" href="#/theme" class="menu-theme text-wrapper" title="Theme">
+            <span class="text"><img class="icon" src="assets/css/app/images/background.png" alt="" height="20px">Theme</span>
+          </a>
+        </li>
+        <li ui-sref-active="active" class="item">
+          <a ui-sref="edit.content({slideId: editCtrl.articleModel.currentSlideId + 1, subslideId: editCtrl.articleModel.currentSubslideId})" href="#/content" class="menu-content text-wrapper" title="Content">
+            <span class="text"><img class="icon" src="assets/css/app/images/background.png" alt="" height="20px">Content</span>
+          </a>
+        </li>
+        <li ui-sref-active="active" class="item">
+          <a ui-sref="edit.style({slideId: editCtrl.articleModel.currentSlideId + 1, subslideId: editCtrl.articleModel.currentSubslideId})" href="#/style" class="menu-style text-wrapper" title="Style">
+            <span class="text"><img class="icon" src="assets/css/app/images/background.png" alt="" height="20px">Style</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="user-options col-sm-3 col-xs-3" >
+      <ul class="nav nav-tabs list" >
+        <li class="item">
+          <a ng-hide="!editCtrl.isSaving" href="#" class="options-preview text-wrapper" title="Preview" data-toggle="tab">
+            <div class="loading">
+              <div class="spinner">
+                <div class="mask">
+                  <div class="maskedCircle"></div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a ng-hide="editCtrl.isSaving" href="#" class="options-saved text-wrapper" title="Saved" data-toggle="tab" ng-click="vm.onSaveClicked()">
+            <img src="assets/css/app/images/background.png" class="text" alt="Saved" height="18px">
+          </a>
+        </li>
+        <li class="item">
+          <a href="#" class="options-preview text-wrapper" title="Preview" data-toggle="tab">
+            <img src="assets/css/app/images/background.png" class="text" alt="Preview" height="18px">
+          </a>
+        </li>
+        <li class="item">
+          <a href="#" class="options-settings text-wrapper" title="Settings" data-toggle="tab">
+            <img src="assets/css/app/images/background.png" class="text" alt="Settings" height="18px">
+          </a>
+        </li>
+        <li class="item">
+          <a href="#" class="options-menu text-wrapper" title="Menu" data-toggle="tab">
+            <img src="assets/css/app/images/background.png" class="text" alt="Menu" height="18px">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="content content-editor">
+  <div class="row">
+    <div ui-view class="col-md-3 col-sm-3 col-xs-3 decorator">
+    </div>
+    <div class="col-md-9 col-xs-9 col-sm-9 presentation" id="presentation">
+      <!-- add-slide button-->
+      <a title="Add Sub-Slide" class="add-slide-up" ng-click="editCtrl.addNewSubslideUp()">
+        <img class="icon" src="assets/css/app/images/content-editor/presentation/add.png" alt="add-icon">
+      </a>
+      <a title="Add Slide" class="add-slide-right" ng-click="editCtrl.addNewSlideRight()">
+        <img class="icon" src="assets/css/app/images/content-editor/presentation/add.png" alt="add-icon">
+      </a>
+      <a title="Add Sub-Slide" class="add-slide-down" ng-click="editCtrl.addNewSubslideDown()">
+        <img class="icon" src="assets/css/app/images/content-editor/presentation/add.png" alt="add-icon">
+      </a>
+      <a title="Add Slide" class="add-slide-left" ng-click="editCtrl.addNewSlideLeft()">
+        <img class="icon" src="assets/css/app/images/content-editor/presentation/add.png" alt="add-icon">
+      </a>
+      <!-- Reveal JS-->
+      <div class="reveal">
+        <div class="slides">
+          <slide-detail parent=".reveal" ng-repeat="item in editCtrl.articleModel.slides" model="item" slide-repeat></slide-detail>
+        </div>
+      </div>
+      <!--Reveal JS-->
+    </div>
+  </div>
+</div>
